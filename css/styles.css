@@ -1,3 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  padding: 0.3rem;
+}
+
 button {
   background-color: green;
   color: white;
@@ -11,6 +21,12 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+table {
+  table-layout: fixed;
+}
+td {
+  width: 5.5rem;
 }
 form {
   display: grid;

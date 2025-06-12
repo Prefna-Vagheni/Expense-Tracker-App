@@ -8,6 +8,113 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
+    <button>Add new month</button>
+    <form action="/action_page.php" id="carform">
+      <select name="month" id="month">
+        <option value=""></option>
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+      </select>
+      <input
+        type="text"
+        id="bills"
+        name="nonthly--bill"
+        placeholder="Enter bill"
+      />
+      <input
+        type="text"
+        id="subscriptions"
+        name="nonthly--subscriptions"
+        placeholder="Enter subscriptions"
+      />
+      <input
+        type="text"
+        id="entertainment"
+        name="nonthly--entertainment"
+        placeholder="Enter entertainment"
+      />
+      <input
+        type="text"
+        id="food--drink"
+        name="nonthly--food--drink"
+        placeholder="Enter food & drink"
+      />
+      <input
+        type="text"
+        id="grocery"
+        name="nonthly--grocery"
+        placeholder="Enter grocery"
+      />
+      <input
+        type="text"
+        id="health--wealth"
+        name="nonthly--health--wealth"
+        placeholder="Enter health & wealth"
+      />
+      <input
+        type="text"
+        id="other"
+        name="nonthly--other"
+        placeholder="Enter other"
+      />
+      <input
+        type="text"
+        id="shipping"
+        name="nonthly--shipping"
+        placeholder="Enter shipping"
+      />
+      <input
+        type="text"
+        id="transport"
+        name="nonthly--transport"
+        placeholder="Enter transport"
+      />
+      <input
+        type="text"
+        id="travel"
+        name="nonthly--travel"
+        placeholder="Enter travel"
+      />
+      <input
+        type="text"
+        id="business"
+        name="nonthly--business"
+        placeholder="Enter business"
+      />
+      <input
+        type="text"
+        id="gift"
+        name="nonthly--gift"
+        placeholder="Enter gift"
+      />
+      <input
+        type="text"
+        id="total--expense"
+        name="nonthly--total--expense"
+        placeholder="Enter total & expense"
+      />
+      <!-- <label for="fname">Firstname:</label>
+      <input type="text" id="firstname" name="name" /> -->
+      <input type="submit" />
+    </form>
+
+    <label for="cars">Monthly expenses:</label>
+    <select name="cars" id="cars" form="carform">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="opel">Opel</option>
+      <option value="audi">Audi</option>
+    </select>
     <table>
       <caption>
         Expense Tracker
@@ -32,23 +139,23 @@
       </thead>
       <tbody>
         <tr>
-          <td>
-            <select name="month" id="month">
-              <option value=""></option>
-              <option value="january">January</option>
-              <option value="february">February</option>
-              <option value="march">March</option>
-              <option value="april">April</option>
-              <option value="may">May</option>
-              <option value="june">June</option>
-              <option value="july">July</option>
-              <option value="august">August</option>
-              <option value="september">September</option>
-              <option value="october">October</option>
-              <option value="november">November</option>
-              <option value="december">December</option>
-            </select>
-          </td>
+          <td>Month</td>
+          <td></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr class="total">
+          <td>Total</td>
           <td><input type="text" /></td>
           <td><input type="text" /></td>
           <td><input type="text" /></td>

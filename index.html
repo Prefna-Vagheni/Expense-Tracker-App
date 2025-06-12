@@ -8,8 +8,8 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <button>Add new month</button>
-    <form action="/action_page.php" id="carform">
+    <button class="add--row">Add new month</button>
+    <form action="/action_page.php" id="carform" class="hidden">
       <select name="month" id="month">
         <option value=""></option>
         <option value="january">January</option>
@@ -116,23 +116,23 @@
         <tr>
           <th>Month</th>
           <th>Bills</th>
-          <th>Subscriptions</th>
-          <th>Entertainment</th>
-          <th>Food & Drink</th>
-          <th>Groceries</th>
-          <th>Health and Wellbeing</th>
+          <th>Subs</th>
+          <th>Entert</th>
+          <th>Food</th>
+          <th>Groc</th>
+          <th>Health</th>
           <th>Other</th>
           <th>Shopping</th>
           <th>Transport</th>
           <th>Travel</th>
           <th>Business</th>
           <th>Gifts</th>
-          <th>Total Expenses</th>
+          <th>Tot Exp</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Month</td>
+        <!-- <tr>
+          <td class="month">Month</td>
           <td class="bill"></td>
           <td class="subscriptions"></td>
           <td class="entertainment"></td>
@@ -146,8 +146,8 @@
           <td class="business"></td>
           <td class="gift"></td>
           <td class="total--expense"></td>
-        </tr>
-        <tr class="total">
+        </tr> -->
+        <tr class="total hidden">
           <td>Total</td>
           <td class="bill"></td>
           <td class="bill"></td>

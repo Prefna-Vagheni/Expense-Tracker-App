@@ -26,6 +26,9 @@ submitBtn.addEventListener('click', function (e) {
   const healthValue = document.getElementById('health--input');
   const otherValue = document.getElementById('other--input');
   const shippingValue = document.getElementById('shipping--input');
+  const transValue = document.getElementById('transport--input');
+  const travelValue = document.getElementById('travel--input');
+  const businessValue = document.getElementById('business--input');
 
   console.log();
   form.classList.add('hidden');

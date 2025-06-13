@@ -37,21 +37,22 @@ submitBtn.addEventListener('click', function (e) {
   const businessValue = document.getElementById('business--input').value;
   const giftValue = document.getElementById('gift--input').value;
   const arrValues = [
-    month,
-    billValue,
-    subscriptionValue,
-    entertainmentValue,
-    foodValue,
-    groceryValue,
-    healthValue,
-    otherValue,
-    shippingValue,
-    transValue,
-    travelValue,
-    businessValue,
-    giftValue,
+    +billValue,
+    +subscriptionValue,
+    +entertainmentValue,
+    +foodValue,
+    +groceryValue,
+    +healthValue,
+    +otherValue,
+    +shippingValue,
+    +transValue,
+    +travelValue,
+    +businessValue,
+    +giftValue,
   ];
   const totalValue = sum(arrValues);
+
+  console.log(month);
 
   const html = `
     <tr>

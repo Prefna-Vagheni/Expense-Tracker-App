@@ -22,6 +22,8 @@ submitBtn.addEventListener('click', function (e) {
     'entertainment--input'
   ).value;
   const foodValue = document.getElementById('food--drink--input');
+  const groceryValue = document.getElementById('grocery--input');
+  const healthValue = document.getElementById('health--input');
 
   console.log();
   form.classList.add('hidden');

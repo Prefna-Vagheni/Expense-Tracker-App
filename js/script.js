@@ -5,6 +5,10 @@ const submitBtn = document.querySelector('.submit--btn');
 const addNewRow = document.querySelector('.add--row');
 const tbody = document.querySelector('tbody');
 
+const sum = function (...num) {
+  return num.reduce((acc, curr) => acc + curr, 0);
+};
+
 console.log(form);
 
 addNewRow.addEventListener('click', function () {
@@ -32,7 +36,22 @@ submitBtn.addEventListener('click', function (e) {
   const travelValue = document.getElementById('travel--input').value;
   const businessValue = document.getElementById('business--input').value;
   const giftValue = document.getElementById('gift--input').value;
-  const totalValue = document.getElementById('total--input').value;
+  const arrValues = [
+    month,
+    billValue,
+    subscriptionValue,
+    entertainmentValue,
+    foodValue,
+    groceryValue,
+    healthValue,
+    otherValue,
+    shippingValue,
+    transValue,
+    travelValue,
+    businessValue,
+    giftValue,
+  ];
+  const totalValue = sum(arrValues);
 
   const html = `
     <tr>
@@ -49,7 +68,7 @@ submitBtn.addEventListener('click', function (e) {
         <td class="travel">${travelValue}</td>
         <td class="business">${businessValue}</td>
         <td class="gift">${giftValue}</td>
-        <td class="total--expense"></td>
+        <td class="total--expense">${totalValue}</td>
     </tr> 
   `;
 

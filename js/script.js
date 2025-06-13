@@ -10,9 +10,15 @@ addNewRow.addEventListener('click', function () {
   form.classList.remove('hidden');
 });
 
-submitBtn.addEventListener('submit', function (e) {
+submitBtn.addEventListener('click', function (e) {
   e.preventDefault();
   console.log(form);
 
+  const billValue = document.getElementById('bills--input').value;
+  const subscriptionValue = document.getElementById(
+    'subscriptions---input'
+  ).value;
+
+  console.log();
   form.classList.add('hidden');
 });

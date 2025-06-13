@@ -5,7 +5,7 @@ const submitBtn = document.querySelector('.submit--btn');
 const addNewRow = document.querySelector('.add--row');
 const tbody = document.querySelector('tbody');
 
-const sum = function (...num) {
+const sum = function (num) {
   return num.reduce((acc, curr) => acc + curr, 0);
 };
 
@@ -72,8 +72,10 @@ submitBtn.addEventListener('click', function (e) {
     </tr> 
   `;
 
-  tbody.insertAdjacentHTML('afterbegin', html);
+  tbody.insertAdjacentHTML('beforeend', html);
 
   console.log();
   form.classList.add('hidden');
+  if (tbody.rows.length > 0)
+    document.querySelector('.total').classList.remove('hidden');
 });

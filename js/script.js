@@ -29,6 +29,8 @@ submitBtn.addEventListener('click', function (e) {
   const transValue = document.getElementById('transport--input');
   const travelValue = document.getElementById('travel--input');
   const businessValue = document.getElementById('business--input');
+  const giftValue = document.getElementById('gift--input');
+  const totalValue = document.getElementById('total--input');
 
   console.log();
   form.classList.add('hidden');

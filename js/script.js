@@ -18,6 +18,9 @@ submitBtn.addEventListener('click', function (e) {
   const subscriptionValue = document.getElementById(
     'subscriptions---input'
   ).value;
+  const entertainmentValue = document.getElementById(
+    'entertainment--input'
+  ).value;
 
   console.log();
   form.classList.add('hidden');

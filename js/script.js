@@ -80,3 +80,38 @@ submitBtn.addEventListener('click', function (e) {
   if (tbody.rows.length > 0)
     document.querySelector('.total').classList.remove('hidden');
 });
+
+function calculateTotal(columnIndex) {
+  let total = 0;
+  const table = document.getElementById('myTable');
+  const tbodyRows = table.querySelectorAll('tbody tr');
+
+  tbodyRows.forEach((row) => {
+    const cellValue = parseFloat(row.cells[columnIndex].textContent) || 0;
+    total += cellValue;
+  });
+
+  document.getElementById('totalCell').textContent = total;
+}
+
+function addRow() {
+  const item = document.getElementById('itemInput').value.trim();
+  const price = parseFloat(document.getElementById('priceInput').value.trim());
+
+  if (!item || isNaN(price) || price < 0) {
+    alert('Please enter a valid item and price!');
+    return;
+  }
+
+  const table = document.getElementById('myTable');
+  const tbody = table.querySelector('tbody');
+
+  let newRow = tbody.insertRow();
+  newRow.insertCell(0).textContent = item;
+  newRow.insertCell(1).textContent = price.toFixed(2); // Formats price to 2 decimal places
+
+  document.getElementById('itemInput').value = '';
+  document.getElementById('priceInput').value = '';
+
+  calculateTotal(1); // Updates the total dynamically
+}

@@ -104,7 +104,4 @@ function addRow() {
   }
 
   const table = document.getElementById('myTable');
-  const tbody = table.querySelector('tbody');
-
-  let newRow = tbody.insertRow();
 }

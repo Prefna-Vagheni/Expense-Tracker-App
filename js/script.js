@@ -110,8 +110,5 @@ function addRow() {
   newRow.insertCell(0).textContent = item;
   newRow.insertCell(1).textContent = price.toFixed(2); // Formats price to 2 decimal places
 
-  document.getElementById('itemInput').value = '';
-  document.getElementById('priceInput').value = '';
-
   calculateTotal(1); // Updates the total dynamically
 }

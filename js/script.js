@@ -96,5 +96,4 @@ function calculateTotal(columnIndex) {
 
 function addRow() {
   const item = document.getElementById('itemInput').value.trim();
-  const price = parseFloat(document.getElementById('priceInput').value.trim());
 }

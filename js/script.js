@@ -80,9 +80,3 @@ submitBtn.addEventListener('click', function (e) {
   if (tbody.rows.length > 0)
     document.querySelector('.total').classList.remove('hidden');
 });
-
-function calculateTotal(columnIndex) {
-  let total = 0;
-  const table = document.getElementById('myTable');
-  const tbodyRows = table.querySelectorAll('tbody tr');
-}

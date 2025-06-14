@@ -90,6 +90,4 @@ function calculateTotal(columnIndex) {
     const cellValue = parseFloat(row.cells[columnIndex].textContent) || 0;
     total += cellValue;
   });
-
-  document.getElementById('totalCell').textContent = total;
 }

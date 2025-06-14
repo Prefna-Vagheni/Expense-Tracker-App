@@ -88,6 +88,5 @@ function calculateTotal(columnIndex) {
 
   tbodyRows.forEach((row) => {
     const cellValue = parseFloat(row.cells[columnIndex].textContent) || 0;
-    total += cellValue;
   });
 }

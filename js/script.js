@@ -107,5 +107,4 @@ function addRow() {
   const tbody = table.querySelector('tbody');
 
   let newRow = tbody.insertRow();
-  newRow.insertCell(0).textContent = item;
 }

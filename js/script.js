@@ -97,11 +97,4 @@ function calculateTotal(columnIndex) {
 function addRow() {
   const item = document.getElementById('itemInput').value.trim();
   const price = parseFloat(document.getElementById('priceInput').value.trim());
-
-  if (!item || isNaN(price) || price < 0) {
-    alert('Please enter a valid item and price!');
-    return;
-  }
-
-  const table = document.getElementById('myTable');
 }

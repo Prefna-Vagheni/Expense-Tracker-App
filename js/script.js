@@ -85,8 +85,4 @@ function calculateTotal(columnIndex) {
   let total = 0;
   const table = document.getElementById('myTable');
   const tbodyRows = table.querySelectorAll('tbody tr');
-
-  tbodyRows.forEach((row) => {
-    const cellValue = parseFloat(row.cells[columnIndex].textContent) || 0;
-  });
 }

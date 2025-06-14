@@ -93,7 +93,3 @@ function calculateTotal(columnIndex) {
 
   document.getElementById('totalCell').textContent = total;
 }
-
-function addRow() {
-  const item = document.getElementById('itemInput').value.trim();
-}

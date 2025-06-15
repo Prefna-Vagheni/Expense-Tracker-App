@@ -5,9 +5,7 @@ const submitBtn = document.querySelector('.submit--btn');
 const addNewRow = document.querySelector('.add--row');
 const tbody = document.querySelector('tbody');
 
-const sum = function (num) {
-  return num.reduce((acc, curr) => acc + curr, 0);
-};
+const sum = (numbers) => numbers.reduce((acc, curr) => acc + curr, 0);
 
 console.log(form);
 

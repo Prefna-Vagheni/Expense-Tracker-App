@@ -71,23 +71,19 @@ submitBtn.addEventListener('click', function (e) {
   const rowHtml = `
     <tr>
         <td class="month">${month}</td>
-        <td class="bill">${billValue}</td>
-        <td class="subscriptions">${subscriptionValue}</td>
-        <td class="entertainment">${entertainmentValue}</td>
-        <td class="food--drink">${foodValue}</td>
-        <td class="grocery">${groceryValue}</td>
-        <td class="health--wealth">${healthValue}</td>
-        <td class="other">${otherValue}</td>
-        <td class="shipping">${shippingValue}</td>
-        <td class="transport">${transValue}</td>
-        <td class="travel">${travelValue}</td>
-        <td class="business">${businessValue}</td>
-        <td class="gift">${giftValue}</td>
+        ${values
+          .map(
+            (value, i) =>
+              `<td class='${inputIds[i]
+                .replace('--input', '')
+                .replace(/--+/g, '--')}'>${value}</td>`
+          )
+          .join()}
         <td class="total--expense">${totalValue}</td>
     </tr> 
   `;
 
-  tbody.insertAdjacentHTML('beforeend', html);
+  tbody.insertAdjacentHTML('beforeend', rowHtml);
 
   console.log();
   form.classList.add('hidden');

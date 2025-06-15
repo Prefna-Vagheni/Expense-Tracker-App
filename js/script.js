@@ -33,7 +33,7 @@ submitBtn.addEventListener('click', function (e) {
 
   const month = document.getElementById('month').value;
   const values = inputIds.map((id) => +document.getElementById(id).value || 0);
-  console.log(values);
+
   const totalValue = sum(values);
 
   /*const billValue = document.getElementById('bills--input').value;
@@ -85,7 +85,6 @@ submitBtn.addEventListener('click', function (e) {
 
   tbody.insertAdjacentHTML('beforeend', rowHtml);
 
-  console.log();
   form.classList.add('hidden');
   if (tbody.rows.length > 0)
     document.querySelector('.total').classList.remove('hidden');

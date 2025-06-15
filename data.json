@@ -1,0 +1,14 @@
+[
+  { "month": "Jan", "income": 1200 },
+  { "month": "feb", "income": 1200 },
+  { "month": "march", "income": 1200 },
+  { "month": "apr", "income": 1200 },
+  { "month": "may", "income": 1200 },
+  { "month": "june", "income": 1200 },
+  { "month": "july", "income": 1200 },
+  { "month": "august", "income": 1200 },
+  { "month": "sept", "income": 1200 },
+  { "month": "oct", "income": 1200 },
+  { "month": "nov", "income": 1200 },
+  { "month": "dec", "income": 1200 }
+]

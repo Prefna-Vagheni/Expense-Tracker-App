@@ -61,23 +61,34 @@ submitBtn.addEventListener('click', function (e) {
 // chart
 const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [
-      {
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
+fetch('data.json')
+  .then((res) => {
+    if (!res.ok) throw new Error('Failed to fetch data');
+
+    return res.json();
+  })
+  .then((data) => createChart(data));
+
+const createChart = function (data) {
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: data.map((row) => row.month),
+      datasets: [
+        {
+          label: '# of Votes',
+          data: data.map((row) => row.income),
+          borderWidth: 1,
+        },
+      ],
     },
-  },
-});
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+      maintainAspectRatio: false,
+    },
+  });
+};

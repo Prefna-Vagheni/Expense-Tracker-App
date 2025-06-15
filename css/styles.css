@@ -41,3 +41,14 @@ form {
 .hidden {
   display: none;
 }
+.chart {
+  min-width: 90rem;
+  height: 45rem;
+  padding: 5rem;
+  margin: 0 auto;
+}
+
+.chart .chart_type {
+  text-align: center;
+  margin-bottom: 3rem;
+}

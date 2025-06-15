@@ -5,6 +5,21 @@ const submitBtn = document.querySelector('.submit--btn');
 const addNewRow = document.querySelector('.add--row');
 const tbody = document.querySelector('tbody');
 
+const inputIds = [
+  'bills--input',
+  'subscriptions---input',
+  'entertainment--input',
+  'food--drink--input',
+  'grocery--input',
+  'health--input',
+  'other--input',
+  'shipping--input',
+  'transport--input',
+  'travel--input',
+  'business--input',
+  'gift--input',
+];
+
 const sum = (numbers) => numbers.reduce((acc, curr) => acc + curr, 0);
 
 console.log(form);
@@ -15,10 +30,12 @@ addNewRow.addEventListener('click', function () {
 
 submitBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  console.log(form);
 
   const month = document.getElementById('month').value;
-  const billValue = document.getElementById('bills--input').value;
+  const values = inputIds.map((id) => +document.getElementById(id).value || 0);
+  const totalValue = sum(values);
+
+  /*const billValue = document.getElementById('bills--input').value;
   const subscriptionValue = document.getElementById(
     'subscriptions---input'
   ).value;
@@ -48,11 +65,9 @@ submitBtn.addEventListener('click', function (e) {
     +businessValue,
     +giftValue,
   ];
-  const totalValue = sum(arrValues);
+  const totalValue = sum(arrValues);*/
 
-  console.log(month);
-
-  const html = `
+  const rowHtml = `
     <tr>
         <td class="month">${month}</td>
         <td class="bill">${billValue}</td>

@@ -36,38 +36,6 @@ submitBtn.addEventListener('click', function (e) {
 
   const totalValue = sum(values);
 
-  /*const billValue = document.getElementById('bills--input').value;
-  const subscriptionValue = document.getElementById(
-    'subscriptions---input'
-  ).value;
-  const entertainmentValue = document.getElementById(
-    'entertainment--input'
-  ).value;
-  const foodValue = document.getElementById('food--drink--input').value;
-  const groceryValue = document.getElementById('grocery--input').value;
-  const healthValue = document.getElementById('health--input').value;
-  const otherValue = document.getElementById('other--input').value;
-  const shippingValue = document.getElementById('shipping--input').value;
-  const transValue = document.getElementById('transport--input').value;
-  const travelValue = document.getElementById('travel--input').value;
-  const businessValue = document.getElementById('business--input').value;
-  const giftValue = document.getElementById('gift--input').value;
-  const arrValues = [
-    +billValue,
-    +subscriptionValue,
-    +entertainmentValue,
-    +foodValue,
-    +groceryValue,
-    +healthValue,
-    +otherValue,
-    +shippingValue,
-    +transValue,
-    +travelValue,
-    +businessValue,
-    +giftValue,
-  ];
-  const totalValue = sum(arrValues);*/
-
   const rowHtml = `
     <tr>
         <td class="month">${month}</td>

@@ -33,6 +33,7 @@ submitBtn.addEventListener('click', function (e) {
 
   const month = document.getElementById('month').value;
   const values = inputIds.map((id) => +document.getElementById(id).value || 0);
+  console.log(values);
   const totalValue = sum(values);
 
   /*const billValue = document.getElementById('bills--input').value;

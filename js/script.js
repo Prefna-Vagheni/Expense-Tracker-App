@@ -78,7 +78,7 @@ submitBtn.addEventListener('click', function (e) {
                 .replace('--input', '')
                 .replace(/--+/g, '--')}'>${value}</td>`
           )
-          .join()}
+          .join('')}
         <td class="total--expense">${totalValue}</td>
     </tr> 
   `;

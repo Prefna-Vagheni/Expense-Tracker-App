@@ -137,7 +137,10 @@ submitBtn.addEventListener('click', function (e) {
     // `;
     // document.querySelector('tfoot').insertAdjacentHTML('beforeend', tfootHTMTL);
 
-    bills.forEach((bill, i) => console.log(bill));
+    bills.forEach((bill, i) => {
+      const key = bill.dataset.key;
+      if (rowTotal.hasOwnProperty(key)) bill.textContent = rowTotal[key];
+    });
     document.querySelector('.total').classList.remove('hidden');
   }
 });

@@ -19,12 +19,61 @@ const inputIds = [
   'business--input',
   'gift--input',
 ];
+const idToKeyMap = {
+  'bills--input': 'bill',
+  'subscriptions---input': 'subs',
+  'entertainment--input': 'ent',
+  'food--drink--input': 'food',
+  'grocery--input': 'grocery',
+  'health--input': 'health',
+  'other--input': 'other',
+  'shipping--input': 'shipping',
+  'transport--input': 'transport',
+  'travel--input': 'travel',
+  'business--input': 'business',
+  'gift--input': 'gift',
+};
+
+let genTotal = {
+  bill: [],
+  subs: [],
+  ent: [],
+  food: [],
+  grocery: [],
+  health: [],
+  other: [],
+  shipping: [],
+  transport: [],
+  travel: [],
+  business: [],
+  gift: [],
+};
 
 const sum = (numbers) => numbers.reduce((acc, curr) => acc + curr, 0);
 
 const emptyFields = () => {
   document.getElementById('month').value = '';
   inputIds.map((val) => (document.getElementById(val).value = ''));
+};
+const addRow = function (values) {
+  values.forEach((val, i) => {
+    const id = inputIds[i];
+    const key = idToKeyMap[id];
+    const num = parseFloat(val);
+
+    if (!isNaN(num)) {
+      genTotal[key].push(num);
+    }
+  });
+};
+const getTotals = function () {
+  const totals = {};
+
+  for (const key in genTotal) {
+    totals[key] = genTotal[key].reduce((sum, val) => sum + val, 0);
+  }
+
+  return totals;
 };
 
 addNewRow.addEventListener('click', function () {
@@ -36,6 +85,9 @@ submitBtn.addEventListener('click', function (e) {
 
   const month = document.getElementById('month').value;
   const values = inputIds.map((id) => +document.getElementById(id).value || 0);
+  addRow(values);
+  const rowTotal = getTotals();
+  console.log(rowTotal);
 
   const totalValue = sum(values);
 

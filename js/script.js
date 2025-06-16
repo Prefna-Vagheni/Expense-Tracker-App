@@ -23,7 +23,7 @@ const inputIds = [
 const sum = (numbers) => numbers.reduce((acc, curr) => acc + curr, 0);
 
 const emptyFields = () => {
-  //   document.getElementById('month').value = '';
+  document.getElementById('month').value = '';
   inputIds.map((val) => (document.getElementById(val).value = ''));
 };
 

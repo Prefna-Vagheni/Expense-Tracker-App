@@ -66,13 +66,24 @@ submitBtn.addEventListener('click', function (e) {
 // chart
 const ctx = document.getElementById('myChart');
 
-fetch('data.json')
-  .then((res) => {
-    if (!res.ok) throw new Error('Failed to fetch data');
+(async function loadData() {
+  try {
+    const res = await fetch('data.json');
+    if (!res.ok) throw new Error(`Problem with http! status: ${res.status}`);
+    const data = await res.json();
+    createChart(data);
+  } catch (err) {
+    console.error('Error loading data:', err);
+  }
+})();
 
-    return res.json();
-  })
-  .then((data) => createChart(data));
+// fetch('data.json')
+//   .then((res) => {
+//     if (!res.ok) throw new Error('Failed to fetch data');
+
+//     return res.json();
+//   })
+//   .then((data) => createChart(data));
 
 const createChart = function (data) {
   new Chart(ctx, {

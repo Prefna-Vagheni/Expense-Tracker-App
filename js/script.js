@@ -32,6 +32,7 @@ const idToKeyMap = {
   'travel--input': 'travel',
   'business--input': 'business',
   'gift--input': 'gift',
+  'total--expense': 'total',
 };
 
 let genTotal = {
@@ -111,8 +112,29 @@ submitBtn.addEventListener('click', function (e) {
   emptyFields();
 
   form.classList.add('hidden');
-  if (tbody.rows.length > 0)
+  if (tbody.rows.length > 0) {
+    const tfootHTMTL = `
+    <tr class="total hidden">
+          <td>Total</td>
+          <td class="bill">${rowTotal.bill}</td>
+          <td class="bill">${rowTotal.subs}</td>
+          <td class="bill">${rowTotal.ent}</td>
+          <td class="bill">${rowTotal.food}</td>
+          <td class="bill">${rowTotal.grocery}</td>
+          <td class="bill">${rowTotal.health}</td>
+          <td class="bill">${rowTotal.other}</td>
+          <td class="bill">${rowTotal.shipping}</td>
+          <td class="bill">${rowTotal.transport}</td>
+          <td class="bill">${rowTotal.travel}</td>
+          <td class="bill">${rowTotal.business}</td>
+          <td class="bill">${rowTotal.gift}</td>
+          <td class="bill">${rowTotal.total}</td>
+        </tr>
+    
+    `;
+    document.querySelector('tfoot').insertAdjacentHTML('beforeend', tfootHTMTL);
     document.querySelector('.total').classList.remove('hidden');
+  }
 });
 
 // chart

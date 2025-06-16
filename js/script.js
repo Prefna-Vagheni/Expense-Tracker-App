@@ -22,9 +22,10 @@ const inputIds = [
 
 const sum = (numbers) => numbers.reduce((acc, curr) => acc + curr, 0);
 
-const emptyFields = () =>
+const emptyFields = () => {
+  //   document.getElementById('month').value = '';
   inputIds.map((val) => (document.getElementById(val).value = ''));
-console.log(form);
+};
 
 addNewRow.addEventListener('click', function () {
   form.classList.remove('hidden');

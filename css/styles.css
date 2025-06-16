@@ -42,7 +42,7 @@ form {
   display: none;
 }
 .chart {
-  min-width: 90rem;
+  min-width: 30rem;
   height: 45rem;
   padding: 5rem;
   margin: 0 auto;

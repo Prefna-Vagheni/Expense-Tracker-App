@@ -4,6 +4,7 @@ const form = document.querySelector('form');
 const submitBtn = document.querySelector('.submit--btn');
 const addNewRow = document.querySelector('.add--row');
 const tbody = document.querySelector('tbody');
+const bills = document.querySelectorAll('.bill');
 
 const inputIds = [
   'bills--input',
@@ -89,6 +90,7 @@ submitBtn.addEventListener('click', function (e) {
   addRow(values);
   const rowTotal = getTotals();
   const lastTotal = Object.values(rowTotal).reduce((acc, cur) => acc + cur, 0);
+  console.log(rowTotal);
   console.log(lastTotal);
 
   const totalValue = sum(values);
@@ -114,26 +116,28 @@ submitBtn.addEventListener('click', function (e) {
 
   form.classList.add('hidden');
   if (tbody.rows.length > 0) {
-    const tfootHTMTL = `
-        <tr class="total hidden">
-            <td>Total</td>
-            <td class="bill">${rowTotal.bill}</td>
-            <td class="bill">${rowTotal.subs}</td>
-            <td class="bill">${rowTotal.ent}</td>
-            <td class="bill">${rowTotal.food}</td>
-            <td class="bill">${rowTotal.grocery}</td>
-            <td class="bill">${rowTotal.health}</td>
-            <td class="bill">${rowTotal.other}</td>
-            <td class="bill">${rowTotal.shipping}</td>
-            <td class="bill">${rowTotal.transport}</td>
-            <td class="bill">${rowTotal.travel}</td>
-            <td class="bill">${rowTotal.business}</td>
-            <td class="bill">${rowTotal.gift}</td>
-            <td class="bill">${rowTotal.total}</td>
-        </tr>
+    // const tfootHTMTL = `
+    //     <tr class="total hidden">
+    //         <td>Total</td>
+    //         <td class="bill">${rowTotal.bill}</td>
+    //         <td class="bill">${rowTotal.subs}</td>
+    //         <td class="bill">${rowTotal.ent}</td>
+    //         <td class="bill">${rowTotal.food}</td>
+    //         <td class="bill">${rowTotal.grocery}</td>
+    //         <td class="bill">${rowTotal.health}</td>
+    //         <td class="bill">${rowTotal.other}</td>
+    //         <td class="bill">${rowTotal.shipping}</td>
+    //         <td class="bill">${rowTotal.transport}</td>
+    //         <td class="bill">${rowTotal.travel}</td>
+    //         <td class="bill">${rowTotal.business}</td>
+    //         <td class="bill">${rowTotal.gift}</td>
+    //         <td class="bill">${rowTotal.total}</td>
+    //     </tr>
 
-    `;
-    document.querySelector('tfoot').insertAdjacentHTML('beforeend', tfootHTMTL);
+    // `;
+    // document.querySelector('tfoot').insertAdjacentHTML('beforeend', tfootHTMTL);
+
+    bills.forEach((bill, i) => console.log(bill));
     document.querySelector('.total').classList.remove('hidden');
   }
 });

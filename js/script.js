@@ -22,6 +22,8 @@ const inputIds = [
 
 const sum = (numbers) => numbers.reduce((acc, curr) => acc + curr, 0);
 
+const emptyFields = () =>
+  inputIds.map((val) => (document.getElementById(val).value = ''));
 console.log(form);
 
 addNewRow.addEventListener('click', function () {
@@ -52,6 +54,8 @@ submitBtn.addEventListener('click', function (e) {
   `;
 
   tbody.insertAdjacentHTML('beforeend', rowHtml);
+
+  emptyFields();
 
   form.classList.add('hidden');
   if (tbody.rows.length > 0)
